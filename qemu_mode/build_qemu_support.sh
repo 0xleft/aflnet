@@ -159,7 +159,7 @@ echo "[+] Build process successful!"
 
 echo "[*] Copying binary..."
 
-cp -f "i386-softmmu/qemu-system-i386" "../../afl-qemu-trace" || exit 1
+cp -f "i386-linux-user/qemu-i386" "../afl-qemu-trace" || exit 1
 
 cd ..
 ls -l ../afl-qemu-trace || exit 1
