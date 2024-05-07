@@ -147,7 +147,7 @@ echo "[+] Patching done."
 
 CFLAGS="-O3 -ggdb" ./configure --disable-system \
   --enable-linux-user --disable-gtk --disable-sdl --disable-vnc \
-  --target-list="i386-softmmu x86_64-softmmu" --enable-pie --enable-kvm || exit 1
+  --target-list="i386-linux-user" --enable-pie --enable-kvm || exit 1
 
 echo "[+] Configuration complete."
 
