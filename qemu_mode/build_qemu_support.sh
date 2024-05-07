@@ -147,7 +147,7 @@ echo "[+] Patching done."
 
 CFLAGS="-O3 -ggdb" ./configure --disable-system \
   --enable-linux-user --disable-gtk --disable-sdl --disable-vnc \
-  --target-list="${CPU_TARGET}-linux-user" --enable-pie --enable-kvm || exit 1
+  --target-list="i386-softmmu x86_64-softmmu" --enable-pie --enable-kvm || exit 1
 
 echo "[+] Configuration complete."
 
@@ -159,7 +159,7 @@ echo "[+] Build process successful!"
 
 echo "[*] Copying binary..."
 
-cp -f "${CPU_TARGET}-linux-user/qemu-${CPU_TARGET}" "../../afl-qemu-trace" || exit 1
+cp -f "i386-softmmu/qemu-system-i386" "../../afl-qemu-trace" || exit 1
 
 cd ..
 ls -l ../afl-qemu-trace || exit 1
